@@ -12,7 +12,7 @@ COPY public ./public
 COPY stores ./stores
 COPY nuxt.config.ts .
 COPY tsconfig.json .
-COPY tailwind.config.js .
+COPY tailwind.config.ts .
 COPY package.json .
 
 RUN yarn install
