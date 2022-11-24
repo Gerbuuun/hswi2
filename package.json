@@ -1,0 +1,48 @@
+{
+  "name": "hswi2",
+  "version": "0.1.0",
+  "description": "",
+  "repository": "git@github.com:Proteus-Eretes/hswi2.git",
+  "author": "IRISdev <iris-dev@proteus-eretes.nl>",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev --no-clear",
+    "serve": "yarn build && nuxt preview",
+    "typecheck": "nuxt typecheck",
+    "lint": "eslint . --ext .ts,.js,.vue,.json --max-warnings 0",
+    "postinstall": "nuxt prepare",
+    "prettier": "prettier --write ."
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config-typescript": "^11.0.0",
+    "@nuxtjs/tailwindcss": "^6.1.3",
+    "@tailwindcss/typography": "^0.5.8",
+    "@typescript-eslint/eslint-plugin": "^5.44.0",
+    "@typescript-eslint/parser": "^5.44.0",
+    "@vueuse/core": "^9.6.0",
+    "@vueuse/nuxt": "^9.6.0",
+    "cypress": "^11.2.0",
+    "eslint": "^8.28.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-json": "^3.1.0",
+    "eslint-plugin-nuxt": "^4.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "nuxt": "^3.0.0",
+    "nuxt-icon": "^0.1.7",
+    "postcss": "^8.4.19",
+    "postcss-custom-properties": "^13.0.0",
+    "prettier": "^2.8.0",
+    "tailwindcss": "^3.2.4",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.3",
+    "vue-eslint-parser": "^9.1.0"
+  },
+  "dependencies": {
+    "@nuxtjs/dayjs": "^1.4.1",
+    "@pinia/nuxt": "^0.4.5",
+    "daisyui": "^2.42.0",
+    "pinia": "^2.0.26"
+  }
+}

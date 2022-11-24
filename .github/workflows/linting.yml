@@ -1,0 +1,51 @@
+---
+name: Linting
+on:
+  - pull_request
+
+jobs:
+  build:
+    name: Smoke test building
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - run: yarn install
+      - run: yarn build
+  typecheck:
+    name: Typecheck TypeScript code
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - run: yarn install
+      - run: yarn typecheck
+  prettier:
+    name: Validate Prettier
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          ref: ${{ github.head_ref }}
+          persist-credentials: false
+      - uses: creyD/prettier_action@v4.2
+        with:
+          dry: True
+          prettier_options: "--check ."
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+  eslint:
+    name: Eslint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - run: yarn install
+      - run: yarn build
+      - run: yarn lint

@@ -1,0 +1,68 @@
+{
+  "root": true,
+  "ignorePatterns": ["dist/**", ".output/**", ".nuxt/**", "dockerdata/**"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:json/recommended",
+    "plugin:vue/vue3-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "@nuxtjs/eslint-config-typescript",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["json", "nuxt", "@typescript-eslint"],
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "parser": "@typescript-eslint/parser"
+  },
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "rules": {
+    "max-len": ["error", { "code": 120 }],
+    "no-unused-vars": "off",
+    "no-console": ["warn", { "allow": ["info", "warn", "error"] }],
+    "no-use-before-define": "off",
+    "no-empty": "warn",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "vue/multi-word-component-names": "off",
+    "vue/no-multiple-template-root": "off",
+    "vue/component-api-style": ["error", ["script-setup"]],
+    "vue/define-emits-declaration": ["error", "type-based"],
+    "vue/block-lang": [
+      "error",
+      {
+        "script": {
+          "lang": "ts"
+        },
+        "style": {
+          "lang": "scss"
+        }
+      }
+    ],
+    "vue/block-tag-newline": [
+      "error",
+      {
+        "singleline": "consistent",
+        "multiline": "always",
+        "maxEmptyLines": 1
+      }
+    ],
+    "vue/component-tags-order": [
+      "error",
+      {
+        "order": ["template", "script", "style"]
+      }
+    ],
+    "vue/component-name-in-template-casing": [
+      "error",
+      "PascalCase",
+      {
+        "registeredComponentsOnly": false
+      }
+    ]
+  }
+}

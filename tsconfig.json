@@ -1,0 +1,10 @@
+{
+  "extends": "./.nuxt/tsconfig.json",
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node"
+  },
+  "compilerOptions": {
+    "types": ["@nuxtjs/dayjs", "dayjs/plugin/relativeTime", "@pinia/nuxt"]
+  }
+}

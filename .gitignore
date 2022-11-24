@@ -1,0 +1,12 @@
+node_modules
+*.log*
+.nuxt
+.nitro
+.cache
+.output
+dist
+yarn.lock
+.DS_Store
+.pnp.*
+.yarn
+.idea
